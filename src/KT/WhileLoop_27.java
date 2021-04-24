@@ -2,7 +2,7 @@ package KT;
 
 public class WhileLoop_27 {
     public static void main(String[] args) {
-        //        while (kondisi) {
+//        while (kondisi) {
 //            aksi
 //        }
 
