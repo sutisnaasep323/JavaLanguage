@@ -7,7 +7,7 @@ public class PersonApp {
         //1
         Person person1 = new Person();
         person1.name = "Asep Sutisna";
-        person1.address = "Cikeas";
+        person1.address = "Nagrak";
         //person1.country = "Saudi Arabia"; // Akan ERROR karena field nya sudah FINAL. kita hanya bisa panggil
 
             //Pemanggilan
