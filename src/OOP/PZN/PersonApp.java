@@ -18,6 +18,8 @@ public class PersonApp {
         //2
         Person person2;
         person2 = new Person();
+        person2.name = "asep";
+        person2.sayHello("Abu Hammad");
 
         //3
         var person3 = new Person();
