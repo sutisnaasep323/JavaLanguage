@@ -6,8 +6,8 @@ public class PersonApp {
         //Pembuatan Objek
         //1
         Person person1 = new Person();
-        person1.name = "Abu Hammad";
-        person1.address = "Nagrak";
+        person1.name = "Abu Hammad"; // manipulasi
+        person1.address = "Nagrak";  // manipulasi / diubah
         //person1.country = "Saudi Arabia"; // Akan ERROR karena field nya sudah FINAL. kita hanya bisa panggil
 
             //Pemanggilan
