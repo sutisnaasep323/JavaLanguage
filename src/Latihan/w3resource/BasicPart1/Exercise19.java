@@ -9,7 +9,7 @@ public class Exercise19 {
 
         String hexa = Integer.toHexString(a);
 
-        System.out.println("Hexa desimal dari = " + a + " adalah : " + hexa);
+        System.out.println("Hexa desimal dari = " + a + " ke hexa adalah : " + hexa);
 
     }
 }

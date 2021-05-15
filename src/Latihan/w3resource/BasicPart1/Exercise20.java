@@ -8,6 +8,6 @@ public class Exercise20 {
 
         String octal = Integer.toOctalString(a);
 
-        System.out.println("octal dari = " + a + " adalah : " + octal);
+        System.out.println("octal dari = " + a + " ke octal adalah : " + octal);
     }
 }
