@@ -12,6 +12,8 @@ public class BreakContinuedanReturn_32 {
                 break; // keyword untuk memaksa keluar dari loop
             } else if (a == 5){
                 continue; // keyword untuk memaksa memulai aksi dari awal. ini tuh akan skip yang bawah dan mulai dari atas
+            } else if (a == 7){
+                return; // return = menghentikan program
             }
 
             System.out.println("Loop ke - " + a);
