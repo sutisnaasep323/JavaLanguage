@@ -35,6 +35,50 @@ public class LoopingBersarang_33 {
         }
 
         //=========================================
+        System.out.println();
+        int x,y;
+        int batas = 9;
+        for (x = 0; x < batas; x++){
+            for (y = batas; y > x; y--){
+                System.out.print(" ");
+            }
+            for (y = 0; y < x; y++){
+                System.out.print(" *");
+            }
+            System.out.println();
+        }
+
+        for (x = 0; x < batas; x++){
+            for ( y = 0; y < x; y++){
+                System.out.print(" ");
+            }
+            for (y = batas; y > x; y--){
+                System.out.print(" *");
+            }
+            System.out.println();
+        }
+
+        int k = 9;
+        for(int i = 0; i < k; i++){
+            for(int j=0; j < k; j++){
+                if ((i+j) >= 9){
+                    System.out.print(" *");
+                }
+                else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.print("\n");
+        }
+        for(int i = 0; i < k; i++){
+            for(int j=0; j < i; j++){
+                System.out.print(" ");
+            }
+            for ( int z = k; z > i; z--){
+                System.out.print(" *");
+            }
+            System.out.print("\n");
+        }
 
         System.out.println();
 
