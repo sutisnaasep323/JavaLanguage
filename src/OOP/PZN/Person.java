@@ -11,6 +11,14 @@ public class Person {
         address = paramAddress;
     }
 
+    Person (String paramName){
+        name = paramName;
+    }
+
+    Person (){
+
+    }
+
     // void = tidak mengembalikan data
     void sayHello(String nama){
         System.out.println("Hello " + nama + ", My name is " + name);

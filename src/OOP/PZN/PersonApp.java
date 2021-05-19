@@ -18,11 +18,13 @@ public class PersonApp {
 
         //2
         Person person2;
-        person2 = new Person("Asep", "Bogor");
+        person2 = new Person("Asep");
         person2.sayHello("Abu Hammad");
 
         //3
-        var person3 = new Person("Yumi", "Cikeas");
+        var person3 = new Person();
+        person3.name = "Yummi";
+        System.out.println(person3.name);
 
     }
 
