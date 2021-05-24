@@ -15,10 +15,9 @@ public class LatihanFungsi_36 {
         System.out.println("Gambar : ");
         gambar(inputPanjang, inputLebar);
 
-        System.out.println("Luasnya = " + luas(inputPanjang, inputLebar));
-        System.out.println("Kelilingnya = " + keliling(inputPanjang, inputLebar));
-
-
+//        System.out.println("Luasnya = " + luas(inputPanjang, inputLebar));
+//        System.out.println("Kelilingnya = " + keliling(inputPanjang, inputLebar));
+        tampilkan(inputPanjang,inputLebar);
     }
 
     private static void gambar(int panjang, int lebar) {
@@ -38,5 +37,10 @@ public class LatihanFungsi_36 {
     private static int keliling(int panjang, int lebar) {
         int hasil = (panjang + lebar) * 2;
         return hasil;
+    }
+
+    private static void tampilkan(int panjang, int lebar){
+        System.out.println("Luasnya = " + luas(panjang, lebar));
+        System.out.println("Kelilingnya = " + keliling(panjang, lebar));
     }
 }
