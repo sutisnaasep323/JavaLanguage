@@ -26,7 +26,7 @@ public class RecursiveMethod {
     //Recursive Method
     static int factorialRecursive(int value) {
         if (value == 1) {
-            return 1;
+            return value;
         } else {
             return value * factorialLoop(value - 1);
             // 5 * nilai sebelumnya
