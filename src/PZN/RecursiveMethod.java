@@ -28,7 +28,7 @@ public class RecursiveMethod {
         if (value == 1) {
             return value;
         } else {
-            return value * factorialLoop(value - 1);
+            return value * factorialRecursive(value - 1);
             // 5 * nilai sebelumnya
         }
     }
