@@ -27,7 +27,8 @@ public class FungsiRekursif_37 {
             return parameter;
         }
 
-        return parameter * hitungFaktorial(parameter - 1);
+        int hasil = parameter * hitungFaktorial(parameter - 1);
+        return hasil;
 
     }
 
@@ -38,7 +39,8 @@ public class FungsiRekursif_37 {
             return parameter;
         }
 
-        return parameter + jumlahNilai(parameter - 1);
+        int hasil = parameter + jumlahNilai(parameter - 1);
+        return hasil;
 
     }
 
