@@ -12,11 +12,12 @@ public class Person {
     }
 
     Person (String paramName){
-        name = paramName;
+//        name = paramName;
+        this(paramName, null); // -> Memanggil constructor lain. seolah-olah contsructor kedua ini itu memanggil constructor pertama, hanya parameter kedua di null kan
     }
 
     Person (){
-
+        this(null);
     }
 
     // void = tidak mengembalikan data
