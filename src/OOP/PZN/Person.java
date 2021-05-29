@@ -6,9 +6,10 @@ public class Person {
     final String country = "Indonesia";
 
     //Membuat Constructor
-    Person (String paramName, String paramAddress){
-        name = paramName;
-        address = paramAddress;
+    Person (String name, String address){
+        // this ini mengambil field/attribut objek diatas. digunakan agar tidak terjadi shadowing
+        this.name = name;
+        this.address = address;
     }
 
     Person (String paramName){
@@ -21,7 +22,7 @@ public class Person {
     }
 
     // void = tidak mengembalikan data
-    void sayHello(String nama){
-        System.out.println("Hello " + nama + ", My name is " + name);
+    void sayHello(String name){
+        System.out.println("Hello " + name + ", My name is " + this.name);
     }
 }
