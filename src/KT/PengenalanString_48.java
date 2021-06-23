@@ -37,6 +37,7 @@ public class PengenalanString_48 {
         System.out.println(kataString);
 
             // memory dari string (String Pool)
+        // string pool, setiap kita merubah string maka dia akan masuk ke memory baru
 
         String str_1 = "hallo";
         String str_2 = "test";
