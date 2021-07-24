@@ -80,8 +80,9 @@ public class Java_47_LatihanArray2D_OperasiMatrix_2 {
                         1. baris[0] => kolom [0] pada matrix 1 * baris[0] => kolom [0] pada matrix 2
                         2. baris[0] => kolom [1] pada matrix 1 * baris[1] => kolom [0] pada matrix 2
                         3. baris[0] => kolom [2] pada matrix 1 * baris[2] => kolom [0] pada matrix 2
-                        3. baris[0] => kolom [3] pada matrix 1 * baris[2] => kolom [0] pada matrix 2
+                        3. baris[0] => kolom [3] pada matrix 1 * baris[3] => kolom [0] pada matrix 2
                         4. Semuanya ditambah
+                        5. (Baris dan Kolom akan menyesuaikan)
                          */
                         nilai += (matrix1[baris][NumNow] * matrix2[NumNow][kolom]);
                     }
