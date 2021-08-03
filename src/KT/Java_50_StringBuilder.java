@@ -9,7 +9,7 @@ public class Java_50_StringBuilder {
          */
 
         StringBuilder builder = new StringBuilder("halo");
-        printData(builder);
+        printData(builder, "Awal");
 
         /*
         SB punya kapasitas, defaultnya adalah 16 karakter. dengan punya capacity artinya setiap ada kata yang baru maka
@@ -19,26 +19,26 @@ public class Java_50_StringBuilder {
         // OPERASI DI STRING BUILDER
             //1. append = menambahkan kata/kalimat. berbeda dengan concat itu dia menambahkan tetapi dia membuat memory address baru
         builder.append(" semuanya");
-        printData(builder);
+        printData(builder, "Append");
 
         builder.append(" warga Bogor");
-        printData(builder);
+        printData(builder,"Append");
 
             //2. Insert = menambahkan kata/kalimat ditengah kalimat dengan menggunakan index
         builder.insert(19, " Kota");
-        printData(builder);
+        printData(builder, "Insert");
 
             //3. Delete = mendelet sebuah kata/kalimat
         builder.delete(19,24);
-        printData(builder);
+        printData(builder, "Delete");
 
             //4. Set Character pada index tertentu
         builder.setCharAt(14, 'W');
-        printData(builder);
+        printData(builder, "Set Character");
 
             //5. replace = mengganti sebuah kata/kaliamt
         builder.replace(20,26, "Depok");
-        printData(builder);
+        printData(builder, "Replace");
 
             //6. Casting to String
         String kalimat = builder.toString();
@@ -49,7 +49,7 @@ public class Java_50_StringBuilder {
     }
 
 
-    private static void printData (StringBuilder dataBuilder){
+    private static void printData (StringBuilder dataBuilder, String name){
         System.out.println("Data = " + dataBuilder);
         System.out.println("Panjang = " + dataBuilder.length());
         System.out.println("Kapasitas = " + dataBuilder.capacity());
@@ -57,7 +57,7 @@ public class Java_50_StringBuilder {
         int addresBuilder = System.identityHashCode(dataBuilder); // cek memory
         System.out.println("Address = " + Integer.toHexString(addresBuilder));
 
-        System.out.println("====================================");
+        System.out.println("\n=============> "+ name +" <===============");
 
     }
 
