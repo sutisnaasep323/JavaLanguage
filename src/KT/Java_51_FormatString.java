@@ -1,5 +1,8 @@
 package KT;
 
+import java.text.Format;
+import java.util.Formatter;
+
 public class Java_51_FormatString {
     public static void main(String[] args) {
         String nama = "Asep Sutisna";
@@ -75,6 +78,43 @@ public class Java_51_FormatString {
         int num4 = 1_000_000_000; //10slot
         System.out.printf("11.)%-,15d\n",num4); // flags = ",", menandakan delimeter per seribu dengan widht 15 sisa 2 slot
 
+        System.out.println("\n> FLOATING POINT");
+        //ini itu akan mengambil nilai 6 desimal dibelakang koma dengan total slot 8, artinya ketika kita menambahkan
+        //desimal dibawah 6 itu ngga berpengaruh. akan berpengaruh ketika kita menaruh > 8
+        float float1 = 1.35f;
+        System.out.printf("1.)%f\n", float1);
+        System.out.printf("2.)%+9f\n", float1); // kita bisa menambahkan flags seperti diatas
+
+        printLine("[.precision]");
+        // adalah mengatur nilai dibelakang koma
+        float float2 = 21.542f;
+        float float3 = 21.552f;
+        System.out.printf("1.)%.1f\n", float2); // dibulatkan kebawah jika nilai < 5 dan menampilkan 1 slot dibelakang koma
+        System.out.printf("2.)%.1f\n", float3); // dibulatkan ketas jika nilai >= 5 dan menampilkan 1 slot dibelakang koma
+
+        System.out.printf("3.)%.2f\n", float2); // menampilkan 2 slot dibelakang koma
+        System.out.printf("4.)%8.2f\n", float2); // menggabungkan dengan widht
+        System.out.printf("5.)%+08.2f\n", float2); // menggabungkan dengan widht dan flag
+
+        printLine("CONTOH");
+        String name = "Asep";
+        float ipk = 3.4325123134425f;
+        System.out.printf("%1$s dapat IPK = %2$+05.2f?\n%1$s : Iya betul!, saya dapat IPK = %2$+05.2f", name, ipk); //posisi,flags (+),flags("0"),widht,precission,conversion
+
+        printLine("Kesimpulan");
+        System.out.println("> SAVE TO VARIABLE");
+        String info_biasa = "Nama = " + name + ", IPK = " + ipk; // akan mengambil 6 desimal dibelakang koma
+        System.out.println(info_biasa);
+        String info_format = String.format("Nama = %s, IPK = %+05.2f",name,ipk); // kita bisa simpan ke variabel seperti ini
+        System.out.println(info_format);
+
+        System.out.println("> SAVE TO STRING BUILDER");
+        //buat object string builder dan formatter untuk memasukkan ke string buildernya
+        StringBuilder builder_info = new StringBuilder();
+        Formatter format_builder = new Formatter(builder_info);
+
+        format_builder.format(info_format);
+        System.out.println(builder_info);
 
     }
 
