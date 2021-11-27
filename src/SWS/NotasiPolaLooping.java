@@ -35,8 +35,8 @@ public class NotasiPolaLooping {
 
         // Looping 1 - 4 dengan mengikuti baris y, y = 1
         for (y = 1; y <= batas; y++){
-            for (x = 1; x <= y; x++){
-                System.out.print(" ");
+            for (x = 1; x > y; x--){
+                System.out.print(x);
             }
             System.out.println(y);
         }
@@ -59,7 +59,7 @@ public class NotasiPolaLooping {
             }
 
             for (x = 1; x <= batas; x++){
-                System.out.print("*");
+                System.out.print(x);
             }
 
             for (spasi = 1; spasi <= ((batas-y)*2); spasi++){
@@ -67,7 +67,7 @@ public class NotasiPolaLooping {
             }
 
             for (k = batas; k >= 1; k--){
-                System.out.print("*");
+                System.out.print(k);
             }
 
             System.out.println();
@@ -80,7 +80,7 @@ public class NotasiPolaLooping {
             }
 
             for (x = 1; x <= batas; x++){
-                System.out.print("*");
+                System.out.print(x);
             }
 
             for (spasi = 1; spasi <= y*2; spasi++){
@@ -88,7 +88,7 @@ public class NotasiPolaLooping {
             }
 
             for (k = batas; k >= 1; k--){
-                System.out.print("*");
+                System.out.print(k);
             }
 
 
@@ -104,7 +104,7 @@ public class NotasiPolaLooping {
             }
 
             for (spasi = 1; spasi < ((batas-y)*2); spasi++) {
-                System.out.print("*");
+                System.out.print(spasi);
             }
 
             System.out.println();
@@ -117,7 +117,7 @@ public class NotasiPolaLooping {
             }
 
             for (spasi = 1; spasi < ((batas-y)*2); spasi++){
-                System.out.print("*");
+                System.out.print(spasi);
             }
 
             System.out.println();
@@ -128,7 +128,7 @@ public class NotasiPolaLooping {
 
         for ( y = batas ; y >= 1 ; y--){
             for ( x = 1; x <= y; x++){
-                System.out.print("*");
+                System.out.print(x);
             }
             for (spasi = batas; spasi > y; spasi--){
                 System.out.print(" ");
@@ -139,7 +139,7 @@ public class NotasiPolaLooping {
             }
 
             for ( k = 1; k <= y; k++){
-                System.out.print("*");
+                System.out.print(k);
             }
 
             System.out.println();
@@ -147,7 +147,7 @@ public class NotasiPolaLooping {
 
     for ( y = 1; y <= batas; y++){
         for (x = 1; x <= y; x++){
-            System.out.print("*");
+            System.out.print(x);
         }
 
         for (spasi = batas; spasi > y; spasi--){
@@ -159,13 +159,13 @@ public class NotasiPolaLooping {
         }
 
         for (k = 1; k <= y; k++){
-            System.out.print("*");
+            System.out.print(k);
         }
 
         System.out.println();
     }
 
-    System.out.println();
+    System.out.println("====== ini yang");
 
         for (y = batas; y >= 1; y--){
 
@@ -174,15 +174,15 @@ public class NotasiPolaLooping {
             }
 
             for (x = 1; x <= batas; x++){
-                System.out.print("*");
+                System.out.print(x);
             }
 
             for (x = 1; x <= y; x++){
-                System.out.print("*");
+                System.out.print(x);
             }
 
             for (k = 1; k <= y; k++){
-                System.out.print("*");
+                System.out.print(k);
             }
 
             System.out.println();
@@ -195,15 +195,15 @@ public class NotasiPolaLooping {
             }
 
             for ( x = 1; x <= batas; x++){
-                System.out.print("*");
+                System.out.print(x);
             }
 
             for (spasi = batas; spasi >= y; spasi--){
-                System.out.print("*");
+                System.out.print(spasi);
             }
 
             for (k = batas; k >= y; k--){
-                System.out.print("*");
+                System.out.print(k);
             }
 
             System.out.println();
@@ -266,12 +266,12 @@ public class NotasiPolaLooping {
             System.out.println();
         }
 
-        System.out.println();
+        System.out.println("==== apa yaa");
 
         for ( y = batas; y >= 1; y--){
 
             for (x = y; x <= batas; x++){
-                System.out.print("*");
+                System.out.print(x);
             }
 
             for (spasi = 1; spasi <= batas; spasi++){
@@ -279,11 +279,11 @@ public class NotasiPolaLooping {
             }
 
             for (k = 1; k <= y; k++){
-                System.out.print("*");
+                System.out.print(k);
             }
 
             for (k = 1; k <= y; k++){
-                System.out.print("*");
+                System.out.print(k);
             }
 
             for (spasi = 1; spasi <= batas; spasi++){
@@ -291,7 +291,7 @@ public class NotasiPolaLooping {
             }
 
             for (x = y; x <= batas; x++){
-                System.out.print("*");
+                System.out.print(x);
             }
 
             System.out.println();
@@ -300,7 +300,7 @@ public class NotasiPolaLooping {
         for ( y = 1; y <= batas; y++){
 
             for (x = batas; x >= y; x--){
-                System.out.print("*");
+                System.out.print(x);
             }
 
             for (spasi = batas; spasi >= 1; spasi--){
@@ -308,11 +308,11 @@ public class NotasiPolaLooping {
             }
 
             for (k = 1; k <= y; k++){
-                System.out.print("*");
+                System.out.print(k);
             }
 
             for (k = 1; k <= y; k++){
-                System.out.print("*");
+                System.out.print(k);
             }
 
 
@@ -321,7 +321,7 @@ public class NotasiPolaLooping {
             }
 
             for (x = y; x <= batas; x++){
-                System.out.print("*");
+                System.out.print(x);
             }
 
 
@@ -337,11 +337,11 @@ public class NotasiPolaLooping {
             }
 
             for (spasi = 1; spasi <= y; spasi++){
-                System.out.print("*");
+                System.out.print(spasi);
             }
 
             for (k = 1; k < y; k++){
-                System.out.print("*");
+                System.out.print(k);
             }
 
             System.out.println();
@@ -461,14 +461,13 @@ public class NotasiPolaLooping {
 
 
 
-//        for ( x = batas; x >= 1; x--){
-//
-//            for ( y = 1; y <= x-1; y++){
-//                System.out.print(y);
-//            }
-//
-//            System.out.println();
-//        }
+        for ( y = 1; y <= batas; y++) {
+
+            for (x = 1+y; x <= y; x--) {
+                System.out.print(x);
+            }
+            System.out.println();
+        }
 
 
     }

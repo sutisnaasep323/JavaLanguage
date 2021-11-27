@@ -36,9 +36,11 @@ public class Java_51_FormatString {
          */
 
         nama = "udin";
+        String nama1 = "asep";
         // 1. Output = udin, wahai udin, kemana saja kamu udin?
         System.out.println("> Contoh 1");
         System.out.printf("%1$s, wahai %1$s, kemana saja kamu %1$s ?\n", nama);
+        System.out.printf("%s, wahai %s, kemana si %s ?\n", nama, nama, nama1);
         System.out.printf("%s, wahai %s, kemana saja kamu %s?\n", nama, nama, nama); // bukan seperti ini
 
         System.out.println("> Contoh 2");
