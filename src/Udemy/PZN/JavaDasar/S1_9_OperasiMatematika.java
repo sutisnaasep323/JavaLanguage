@@ -1,7 +1,6 @@
-package PZN;
+package Udemy.PZN.JavaDasar;
 
-public class OperasiMatematika {
-
+public class S1_9_OperasiMatematika {
     public static void main(String[] args) {
 
         // Operasi Matematika
@@ -14,6 +13,7 @@ public class OperasiMatematika {
 
         // Augmented Assigment
 
+        a += 50; // a = a + 50;
         System.out.println(a); // 150
 
         a -= 30;
@@ -35,5 +35,4 @@ public class OperasiMatematika {
         System.out.println(c);
 
     }
-
 }
