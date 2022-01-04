@@ -11,7 +11,7 @@ public class S1_22_MethodReturnValue {
         System.out.println(sum2(7,"*", 5));
         System.out.println(sum2(5, "-", 2));
 
-        MethodReturnValue Kurang = new MethodReturnValue();
+        S1_22_MethodReturnValue Kurang = new S1_22_MethodReturnValue();
         System.out.println(Kurang.kurang(100,50));
     }
 
