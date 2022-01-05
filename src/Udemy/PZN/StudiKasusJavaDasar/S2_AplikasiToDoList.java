@@ -5,7 +5,7 @@ public class S2_AplikasiToDoList {
     public static String[] model = new String[10];
 
     public static void main(String[] args) {
-        TestAddTodoList();
+        TestRemoveTodoList();
     }
 
     /**
@@ -82,9 +82,37 @@ public class S2_AplikasiToDoList {
         } else if (model[number - 1] == null) {
             return false;
         } else {
-            model[number - 1] = null;
+
+            /**
+             * mulai perulangan dari index yang dihapus sampai data terakhir. kemudian data digeser
+             */
+            for (int i = (number - 1); i < model.length; i++) {
+                if (i == (model.length - 1)){ // jika data terakhir maka beri nilai null
+                    model[i] = null;
+                } else {
+                    model[i] = model[i+1];
+                }
+            }
             return true;
         }
+    }
+
+    public static void TestRemoveTodoList(){
+        AddTodoList("satu");
+        AddTodoList("dua");
+        AddTodoList("tiga");
+        AddTodoList("empat");
+
+        var result = RemoveTodoList(20);
+        System.out.println(result);
+
+        result = RemoveTodoList(5);
+        System.out.println(result);
+
+        result = RemoveTodoList(3);
+        System.out.println(result);
+
+        ShowTodoList();
     }
 
     /**
