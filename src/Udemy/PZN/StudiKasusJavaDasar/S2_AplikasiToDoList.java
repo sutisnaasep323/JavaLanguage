@@ -3,9 +3,10 @@ package Udemy.PZN.StudiKasusJavaDasar;
 public class S2_AplikasiToDoList {
 
     public static String[] model = new String[10];
+    public static java.util.Scanner scanner = new java.util.Scanner(System.in);
 
     public static void main(String[] args) {
-        TestRemoveTodoList();
+        TestInput();
     }
 
     /**
@@ -113,6 +114,20 @@ public class S2_AplikasiToDoList {
         System.out.println(result);
 
         ShowTodoList();
+    }
+
+    public static String Input(String info){
+        System.out.print(info + " : ");
+        String data = scanner.nextLine();
+        return data;
+    }
+
+    public static void TestInput(){
+        var nama = Input("Nama");
+        System.out.println("Hi " + nama);
+
+        var kuliah = Input("Kuliah");
+        System.out.println("Anda kuliah di " + kuliah);
     }
 
     /**
