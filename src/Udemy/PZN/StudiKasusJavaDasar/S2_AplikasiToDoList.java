@@ -6,7 +6,9 @@ public class S2_AplikasiToDoList {
     public static java.util.Scanner scanner = new java.util.Scanner(System.in);
 
     public static void main(String[] args) {
-        TestInput();
+
+        TestRemoveTodoList();
+
     }
 
     /**
@@ -78,20 +80,22 @@ public class S2_AplikasiToDoList {
      * Menghapus ToDo dari List
      */
     public static boolean RemoveTodoList(Integer number) {
-        if ((number - 1) >= model.length) {
+        //Mengecek input yang ingin dihapus itu yang mana
+        if ((number - 1) >= model.length) { //jika diluar jangkauan array
             return false;
-        } else if (model[number - 1] == null) {
+        } else if (model[number - 1] == null) { //jika datanya sudah null didalam array
             return false;
         } else {
 
             /**
              * mulai perulangan dari index yang dihapus sampai data terakhir. kemudian data digeser
+             * mengapa number - 1? karena untuk menyesuaikan dengan index, index dimulai dari 0
              */
             for (int i = (number - 1); i < model.length; i++) {
-                if (i == (model.length - 1)){ // jika data terakhir maka beri nilai null
+                if (i == (model.length - 1)){ // jika data terakhir maka beri nilai null, kalau tidak terjadi IOB
                     model[i] = null;
                 } else {
-                    model[i] = model[i+1];
+                    model[i] = model[i+1]; //geser
                 }
             }
             return true;
@@ -135,7 +139,25 @@ public class S2_AplikasiToDoList {
      */
 
     public static void ViewShowTodoList() {
+        while(true){
+            ShowTodoList();
 
+            System.out.println("1. Tambah");
+            System.out.println("2. Hapus");
+            System.out.println("x. Keluar");
+
+            var input = Input("Pilih");
+
+            if (input.equals("1")){
+                ViewAddTodoList();
+            } else if (input.equals("2")){
+                ViewRemoveTodoList();
+            } else if (input.equalsIgnoreCase("x")){
+                break;
+            } else {
+                System.out.println("Input tidak dimengerti");
+            }
+        }
     }
 
     /**
