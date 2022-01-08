@@ -7,7 +7,7 @@ public class S2_AplikasiToDoList {
 
     public static void main(String[] args) {
 
-        TestRemoveTodoList();
+        TestViewShowTodoList();
 
     }
 
@@ -16,6 +16,7 @@ public class S2_AplikasiToDoList {
      */
 
     public static void ShowTodoList() {
+        System.out.println("TODO LIST");
         for (int i = 0; i < model.length; i++) {
             String todo = model[i];
             int no = i + 1;
@@ -142,6 +143,7 @@ public class S2_AplikasiToDoList {
         while(true){
             ShowTodoList();
 
+            System.out.println("== MENU ==");
             System.out.println("1. Tambah");
             System.out.println("2. Hapus");
             System.out.println("x. Keluar");
@@ -158,6 +160,15 @@ public class S2_AplikasiToDoList {
                 System.out.println("Input tidak dimengerti");
             }
         }
+    }
+
+    public static void TestViewShowTodoList(){
+        AddTodoList("satu");
+        AddTodoList("dua");
+        AddTodoList("tiga");
+        AddTodoList("empat");
+
+        ViewShowTodoList();
     }
 
     /**
