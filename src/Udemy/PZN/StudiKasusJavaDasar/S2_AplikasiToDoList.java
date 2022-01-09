@@ -7,7 +7,7 @@ public class S2_AplikasiToDoList {
 
     public static void main(String[] args) {
 
-        TestViewShowTodoList();
+        TestViewAddTodoList();
 
     }
 
@@ -176,6 +176,23 @@ public class S2_AplikasiToDoList {
      */
 
     public static void ViewAddTodoList() {
+        System.out.println("Menambah Todo List");
+
+        var todo = Input("Todo (x, jika batal)");
+        if (todo.equalsIgnoreCase("x")){
+
+        } else {
+            AddTodoList(todo);
+        }
+    }
+
+    public static void TestViewAddTodoList(){
+        AddTodoList("test1");
+        AddTodoList("test2");
+
+        ViewAddTodoList();
+
+        ShowTodoList();
     }
 
 
