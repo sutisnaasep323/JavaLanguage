@@ -7,7 +7,7 @@ public class S2_AplikasiToDoList {
 
     public static void main(String[] args) {
 
-        TestViewAddTodoList();
+        TestViewRemoveTodoList();
 
     }
 
@@ -200,6 +200,29 @@ public class S2_AplikasiToDoList {
      * Menampilkan view Menghapus ToDo dari List
      */
     public static void ViewRemoveTodoList() {
+        System.out.println("Menghapus Todo List");
+
+        var number = Input("Nomor yang dihapus (x, jika batal)");
+        if (number.equalsIgnoreCase("x")){
+
+        } else {
+            boolean success = RemoveTodoList(Integer.valueOf(number));
+            if (!success) {
+                System.out.println("Gagal Menghapus Todolist");
+            }
+        }
+    }
+
+    public static void TestViewRemoveTodoList(){
+        AddTodoList("test3");
+        AddTodoList("test4");
+        AddTodoList("test5");
+
+        ShowTodoList();
+
+        ViewRemoveTodoList();
+
+        ShowTodoList();
 
     }
 
