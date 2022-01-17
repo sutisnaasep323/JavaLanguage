@@ -7,7 +7,7 @@ public class S2_AplikasiToDoList {
 
     public static void main(String[] args) {
 
-        TestViewRemoveTodoList();
+        ViewShowTodoList();
 
     }
 
@@ -42,14 +42,14 @@ public class S2_AplikasiToDoList {
         // Mengecek apakah datanya ada yang kosong?
         var isFull = true;
         for (int i = 0; i < model.length; i++) {
-            // jika model masih ada yang kosong
+            // jika data masih ada yang kosong
             if (model[i] == null) {
-                isFull = false;
+                isFull = false; // jadikan variabel isFull menjadi False agar tidak dieksekusi perintah selanjutnya
                 break;
             }
         }
 
-        //mengecek apakah sudah penuh?
+        //mengecek ketika data sudah penuh
         if (isFull) {
             var temp = model; // untuk menampung data sebelumnya, agar tidak hilang
 
@@ -208,7 +208,7 @@ public class S2_AplikasiToDoList {
         } else {
             boolean success = RemoveTodoList(Integer.valueOf(number));
             if (!success) {
-                System.out.println("Gagal Menghapus Todolist");
+                System.out.println("Gagal Menghapus Todolist: " + number);
             }
         }
     }
