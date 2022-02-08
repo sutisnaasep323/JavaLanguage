@@ -18,7 +18,8 @@ public class PersonApp {
         person2.sayHello("Hammad");
 
         Person person3;
-        person3 = new Person("Hammad", "Gunung Putri");
+        person3 = new Person("Hammad");
+        person3.sayHello("Roby");
 
     }
 }
