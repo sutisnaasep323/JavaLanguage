@@ -28,4 +28,8 @@ public class Person {
         this(null);
     }
 
+    void myClass(String myName, String myClass){
+        System.out.println("Halo " + name + " nama saya " + myName + " dari kelas " + myClass);
+    }
+
 }

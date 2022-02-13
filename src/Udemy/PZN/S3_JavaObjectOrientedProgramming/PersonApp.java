@@ -16,6 +16,7 @@ public class PersonApp {
         Person person2 = new Person("Asep", "Bogor");
 //        person2.name = "Asep";
         person2.sayHello("Hammad");
+        person2.myClass("Doni", "R19");
 
         Person person3;
         person3 = new Person("Hammad");
