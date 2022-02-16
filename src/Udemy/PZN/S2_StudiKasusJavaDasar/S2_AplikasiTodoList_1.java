@@ -4,7 +4,17 @@ import java.util.Scanner;
 
 public class S2_AplikasiTodoList_1 {
 
-    public static String[] model = new String[10];
+    /*
+    1. View Menu -
+    2. View Add -
+    3. View Remove
+    4. View Data -
+    5. Logic input -
+    6. logic add -
+    7. logic remove
+     */
+
+    public static String[] model = new String[2];
     public static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -98,6 +108,24 @@ public class S2_AplikasiTodoList_1 {
      */
 
     public static void AddTodoList(String todo){
+        var isFull = true;
+
+        for (int i = 0; i < model.length; i++) {
+            if(model[i] == null){
+                isFull = false;
+                break;
+            }
+        }
+
+        if(isFull){
+            var temp = model;
+
+            model = new String[model.length * 2];
+            for (int i = 0; i < temp.length; i++) {
+                model[i] = temp[i];
+            }
+        }
+
         for (int i = 0; i < model.length; i++) {
             if (model[i] == null){
                 model[i] = todo;
