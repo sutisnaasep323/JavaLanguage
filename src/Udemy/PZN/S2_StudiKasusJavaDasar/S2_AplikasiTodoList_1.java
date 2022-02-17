@@ -7,7 +7,7 @@ public class S2_AplikasiTodoList_1 {
     /*
     1. View Menu -
     2. View Add -
-    3. View Remove
+    3. View Remove -
     4. View Data -
     5. Logic input -
     6. logic add -
@@ -62,7 +62,7 @@ public class S2_AplikasiTodoList_1 {
             if (input.equals("1")){
                 ViewAddTodoList();
             } else if (input.equals("2")){
-
+                ViewRemoveTodoList();
             } else if (input.equalsIgnoreCase("x")){
                 break;
             } else {
@@ -89,10 +89,10 @@ public class S2_AplikasiTodoList_1 {
     }
 
     /*
-    View Todo List
+    View Add Todo List
      */
     public static void ViewAddTodoList(){
-        System.out.println("==== Tambah Todo List ===");
+        System.out.println("==== Tambah Todo List ====");
         var todo = Input("Masukkan Todo (x, jika batal)");
 
         if (todo.equalsIgnoreCase("x")){
@@ -101,6 +101,23 @@ public class S2_AplikasiTodoList_1 {
             AddTodoList(todo);
         }
 
+    }
+
+    /*
+    View Remove Todo List
+     */
+    public static void ViewRemoveTodoList(){
+        System.out.println("==== Remove Todo List ====");
+        var remove = Input("Hapus Todo ke- (x, jika batal)");
+
+        if (remove.equalsIgnoreCase("x")){
+
+        } else {
+            boolean ifnotsucces = RemoveTodoList(Integer.parseInt(remove));
+            if (ifnotsucces) {
+                System.out.println("Gagal menghapus todo ke: " + remove);
+            }
+        }
     }
 
     /**
@@ -138,6 +155,24 @@ public class S2_AplikasiTodoList_1 {
     /**
      * Logic Menghapus Todo list
      */
+    public static boolean RemoveTodoList(int number){
+        if ((number-1) >= model.length){
+            return true;
+        } else if (model[number-1] == null){
+            return true;
+        } else {
+
+            for (int i = (number-1); i < model.length; i++) {
+                if(i == (model.length-1)){ //data terakhir
+                    model[i] = null;
+                } else {
+                    model[i] = model[i+1]; //geser
+                }
+            }
+
+            return false;
+        }
+    }
 
 
     /**
@@ -165,9 +200,22 @@ public class S2_AplikasiTodoList_1 {
 
     //Test ShowTodoList
     public static void testShowTodoList() {
-        model[0] = "Menambahkan Data";
-        model[1] = "Menghapus Data";
-        model[2] = "Exit";
+        AddTodoList("Menambahkan Data");
+        AddTodoList("Menghapus Data");
+        AddTodoList("Exit");
+
+        ShowTodoList();
+    }
+
+    //Test ShowRemoveTodoList
+    public static void testRemoveTodoList() {
+        AddTodoList("Asep");
+        AddTodoList("Yumi");
+        AddTodoList("Kazu");
+
+        ShowTodoList();
+
+        //RemoveTodoList();
 
         ShowTodoList();
     }

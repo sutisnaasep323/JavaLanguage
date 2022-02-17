@@ -82,7 +82,7 @@ public class S2_AplikasiToDoList {
      */
     public static boolean RemoveTodoList(Integer number) {
         //Mengecek input yang ingin dihapus itu yang mana
-        if ((number - 1) >= model.length) { //jika diluar jangkauan array
+        if ((number - 1) >= model.length) { //jika number yang diinput diluar jangkauan array
             return false;
         } else if (model[number - 1] == null) { //jika datanya sudah null didalam array
             return false;
@@ -96,7 +96,7 @@ public class S2_AplikasiToDoList {
                 if (i == (model.length - 1)){ // jika data terakhir maka beri nilai null, kalau tidak terjadi IOB
                     model[i] = null;
                 } else {
-                    model[i] = model[i+1]; //geser
+                    model[i] = model[i+1]; //geser sampai data ujung yang nul
                 }
             }
             return true;
