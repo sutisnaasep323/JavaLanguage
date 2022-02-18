@@ -1,17 +1,16 @@
 package Udemy.PZN.S3_JavaObjectOrientedProgramming.company;
 
-public class Manager {
+public class Manager extends Employee{
 
-    String name;
     String company;
     int age;
 
     Manager (String name){
-        this.name = name;
+        super(name);
     }
 
     Manager (String name, String company, int age){
-        this.name = name;
+        super(name);
         this.company = company;
         this.age = age;
     }

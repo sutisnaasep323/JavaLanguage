@@ -107,6 +107,9 @@ public class S2_AplikasiTodoList_1 {
     View Remove Todo List
      */
     public static void ViewRemoveTodoList(){
+
+        ShowTodoList();
+
         System.out.println("==== Remove Todo List ====");
         var remove = Input("Hapus Todo ke- (x, jika batal)");
 
@@ -173,16 +176,6 @@ public class S2_AplikasiTodoList_1 {
             return false;
         }
     }
-
-
-    /**
-     * View Menambahkan Todo list
-     */
-
-    /**
-     * View Menghapus Todo list
-     */
-
 
     // Test Menambahkan TodoList
     public static void testAddTodoList(){

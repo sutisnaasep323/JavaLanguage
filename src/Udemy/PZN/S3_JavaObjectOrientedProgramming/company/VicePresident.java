@@ -2,6 +2,10 @@ package Udemy.PZN.S3_JavaObjectOrientedProgramming.company;
 
 public class VicePresident extends Manager{
 
+    VicePresident(String name){
+        super(name);
+    }
+
     VicePresident(String name, String company, int age){
         super(name, company, age);
     }
