@@ -19,6 +19,16 @@ public class PolymerphismApp {
     }
 
     static void sayHello(Employee employee){
-        System.out.println("Hello " + employee.name);
+        if (employee instanceof VicePresident){
+            VicePresident vp = (VicePresident) employee;
+            System.out.println("Hello vp " + vp.name);
+        } else if (employee instanceof Manager){
+            Manager manager = (Manager) employee;
+            System.out.println("Hello manager " + manager.name);
+        }else{
+            System.out.println("Hello " + employee.name);
+        }
+
+
     }
 }
